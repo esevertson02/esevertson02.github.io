@@ -1,0 +1,616 @@
+@charset "UTF-8";
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.justify-content-around {
+    justify-content: space-around;
+}
+
+.justify-content-evenly {
+    justify-content: space-evenly;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.mt-0 {
+    margin-top: 0;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.my-0 {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.list-unstyled {
+    padding: 0;
+    list-style: none;
+}
+
+html {
+    background: #FFF;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    background-color: #FFF;
+    font-family: Arial, sans-serif;
+    color: #2a2a2a;
+    margin: 0;
+    padding: 0;
+}
+
+a,
+.btn-link {
+    text-decoration: none;
+    color: #8C1D40;
+}
+
+a:hover {
+    color: #d23153;
+    transition: all 0.25s ease-in-out 0s;
+}
+
+iframe {
+    border: none;
+}
+
+.wrapper {
+    margin: 0 auto;
+}
+
+.content h2 {
+    font-weight: normal;
+    font-size: 36px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.content .card-body {
+    padding: 0 25px;
+}
+
+.content .warning {
+    max-width: 75%;
+    margin: 1rem auto;
+}
+
+.content .warning .headline,
+.content .warning .subtext {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.content .warning .headline {
+    font-weight: bold;
+}
+
+.content .warning .more {
+    font-size: 11px;
+    margin: 8px 0;
+    color: #aaaaaa;
+}
+
+.content .warning .btn-container {
+    margin-top: 1rem;
+    display: flex;
+}
+
+.content .warning .btn-container>form {
+    margin-right: 0.5rem;
+}
+
+.header {
+    background: #FFC627;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.header h1 a {
+    background-image: url("/cas/images/asu_sunburst_logo_mobile_125px.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left center;
+    height: 55px;
+    width: 125px;
+    display: block;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.header .ad {
+    display: none;
+    height: 80px;
+    overflow: hidden;
+}
+
+.footer {
+    background-color: #E5E5E5;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 20px 0 15px 0;
+}
+
+.footer .help {
+    color: #999;
+    text-align: center;
+    font-size: 12px;
+}
+
+.footer .help .teaser {
+    color: #666;
+    font-weight: bold;
+}
+
+.footer ul.link-list {
+    list-style-type: none;
+    margin: 0;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 10px;
+}
+
+.footer ul.link-list li {
+    border-right: 1px solid #999;
+    display: inline;
+    font-weight: bold;
+    padding: 0 6px 0 5px;
+}
+
+.footer ul.link-list li:last-child {
+    border: none;
+}
+
+.footer ul.link-list li a {
+    color: #999;
+}
+
+#logout {
+    margin: 10px;
+    padding: 25px 0;
+}
+
+#logout .message {
+    padding: 10px;
+}
+
+#logout .message .headline {
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 35px;
+    padding: 5px 5px 5px 75px;
+}
+
+#logout .message .headline.loading {
+    background: transparent url("/cas/images/loader.gif") 20px 2px no-repeat;
+}
+
+#logout .message .headline.success {
+    background: transparent url("/cas/images/green_checkmark.png") 25px 5px no-repeat;
+}
+
+#logout .message .headline.warning {
+    background: transparent url("/cas/images/warning_48.png") 18px 0 no-repeat;
+}
+
+#logout .message .subtext {
+    font-weight: bold;
+    margin: 0 0 25px 75px;
+}
+
+#logout #logout_pending {
+    padding-bottom: 94px;
+}
+
+#logout #logout_complete {
+    display: none;
+}
+
+.lockout {
+    margin: 20px auto;
+    padding: 0;
+    width: 500px;
+}
+
+.lockout .lockout-messages {
+    background: transparent url("/cas/images/clock_48.png") 20px 20px no-repeat;
+    line-height: 200%;
+    padding: 20px 0 50px 75px;
+}
+
+.lockout .headline,
+.lockout .subtext {
+    font-size: 1.15rem;
+}
+
+.lockout .headline {
+    font-weight: bold;
+}
+
+.lockout .more {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+@media only screen and (max-width: 768px) {
+    body.login {
+        height: 100%;
+    }
+
+    body.login>.wrapper {
+        position: relative;
+        min-height: 100%;
+    }
+
+    body.login>.wrapper>.container {
+        padding-bottom: 120px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    html {
+        height: auto;
+    }
+
+    .wrapper {
+        padding: 50px 0;
+    }
+
+    .wrapper .container {
+        width: 542px;
+        margin: 0 auto;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    .wrapper .content {
+        border: 1px solid #E5E5E5;
+        border-bottom: none;
+        padding: 20px 9px 10px 9px;
+        background-color: #FBFBFB;
+    }
+
+    .wrapper .content h2 {
+        margin: 0;
+    }
+
+    .wrapper .content .card-body {
+        padding: 0;
+    }
+
+    .wrapper .footer {
+        border: 1px solid #E5E5E5;
+        border-top: none;
+        background-color: #FBFBFB;
+    }
+
+    .header h1 a {
+        background-image: url("/cas/images/asu_university_horiz_rgb_maroongold_150_275px.png");
+        height: 60px;
+        width: 275px;
+    }
+
+    .header .ad {
+        display: block;
+    }
+
+    .footer {
+        position: static;
+        left: unset;
+        right: unset;
+        bottom: unset;
+        padding: 50px 0 30px 0;
+    }
+
+    .footer .help {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer .help .teaser {
+        margin-right: 4px;
+    }
+
+    .footer ul.link-list {
+        font-size: 11px;
+    }
+}
+
+.error-container {
+    text-align: center;
+}
+
+.error-container .alert {
+    margin: 12px;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #999;
+    background-color: #E5E5E5;
+}
+
+.error-container .alert.alert-danger {
+    border-color: #8C1D40;
+    color: #8C1D40;
+    background-color: #FFF;
+}
+
+.error {
+    text-align: center;
+    margin: 0 auto;
+    width: 360px;
+}
+
+.error .title {
+    display: block;
+    color: #dd3c10;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px 15px 15px 45px;
+    margin: 0 60px;
+}
+
+.error .title:first-child {
+    background: transparent url("/cas/images/warning_48.png") left top no-repeat;
+}
+
+.error .title {
+    margin: 0;
+}
+
+.hide {
+    display: none;
+}
+
+.card-providers .card-body .card-title {
+    text-align: center;
+}
+
+.card-providers .card-body .provider-list {
+    flex-wrap: wrap;
+}
+
+.card-providers .card-body .provider-list li {
+    width: 33%;
+    margin: 6px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #999;
+}
+
+.btn {
+    border: none;
+    color: #FFF;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 0px 20px !important;
+    height: 36px;
+    line-height: 1;
+    appearance: none;
+    background-color: #8C1D40;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn:hover {
+    background-color: #d23153;
+    transition: all 0.25s ease-in-out 0s;
+    color: #FFF;
+}
+
+.btn>span:not(:first-child):not(:last-child) {
+    margin: 0 4px;
+}
+
+.btn>span:first-child {
+    margin-right: 4px;
+}
+
+.btn>span:last-child {
+    margin-left: 4px;
+}
+
+.btn.btn-link {
+    background: none;
+    color: #8C1D40;
+    font-size: 14px;
+}
+
+.btn.btn-link:hover {
+    background: none;
+    color: #62142d;
+}
+
+.form-type-checkbox {
+    padding-left: 1.5em;
+}
+
+.form-type-checkbox input[type="checkbox"] {
+    height: 1.5em;
+    width: 1.5em;
+    vertical-align: middle;
+}
+
+.form-type-checkbox label {
+    display: inline-block;
+    padding-left: 0.2em;
+    max-width: 95%;
+}
+
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group.form-actions {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.form-group .form-check {
+    order: 2;
+}
+
+.form-group .form-check+.form-action {
+    order: 1;
+}
+
+.form-group .control-label {
+    font-size: 15px;
+    font-weight: bold;
+    width: 125px;
+    margin: 6px 0;
+    display: inline-block;
+}
+
+.form-group .form-control {
+    display: block;
+    background-color: #FFF;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    color: #000;
+    font-size: 14px;
+    padding: 12px 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-group .hint {
+    text-align: right;
+}
+
+@media only screen and (min-width: 768px) {
+    .form-group {
+        display: flex;
+        justify-content: flex-start;
+        margin: 0;
+        padding: 8px 0;
+    }
+
+    .form-group .form-control {
+        padding: 6px 5px;
+    }
+
+    .form-group .control-label {
+        text-align: right;
+    }
+
+    .form-group .input-container {
+        margin: 0 8px;
+    }
+
+    .form-group .form-action {
+        margin-left: 133px;
+        order: 1;
+    }
+
+    .form-group .hint {
+        font-size: 12px;
+        padding: 7px 0;
+    }
+}
+
+/* Action buttons for all forms */
+
+.form-actions {
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.login-form h3.welcome-text {
+    margin-top: 0px;
+}
+
+.asu-generic-success {
+    background: transparent url(../images/green_checkmark.png) 20px 20px no-repeat;
+    font-size: 1.1em;
+    padding: 20px 20px 50px 65px;
+}
+
+.asu-generic-success .headline {
+    line-height: 200%;
+}
+
+.mfa-notice {
+    display: flex;
+    color: #999;
+    padding-bottom: 10px;
+}
+
+.mfa-notice-info {
+    flex: 3;
+}
+
+.mfa-notice-info .padlock {
+    padding-right: 5px;
+    vertical-align: text-bottom;
+}
+
+.mfa-challenge-cancel {
+    flex: 1;
+    text-align: right;
+    margin-top: 4px;
+}
+
+#duo_iframe {
+    width: 100%;
+    height: 330px;
+}
+
+.mfa-retry {
+    font-size: 1.3em;
+    color: #333;
+    text-align: center;
+}
